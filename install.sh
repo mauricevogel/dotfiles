@@ -35,6 +35,7 @@ BREW_FORMULAE=(
   htop
   postgresql@16
   redis
+  herdr
 )
 
 # Homebrew casks (GUI apps) — comment out anything you don't want
@@ -298,6 +299,8 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.config"
 cp "$DOTFILES_DIR/zshrc/.zshrc" "$HOME/.zshrc"
 cp "$DOTFILES_DIR/p10k/.p10k.zsh" "$HOME/.p10k.zsh"
 cp "$DOTFILES_DIR/aerospace/.aerospace.toml" "$HOME/.aerospace.toml"
+mkdir -p "$HOME/.config/herdr"
+cp "$DOTFILES_DIR/herdr/config.toml" "$HOME/.config/herdr/config.toml"
 ok "Config files copied"
 
 echo ""
